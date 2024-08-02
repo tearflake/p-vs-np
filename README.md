@@ -26,8 +26,6 @@ We say that a logic formula is in conjunctive normal form (CNF) when it takes a 
 
     (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
 
-It is possible to convert any logic formula to it CNF using [double negative law](https://en.wikipedia.org/wiki/Double_negation#Double_negative_elimination), [De Morgan's laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws) and [distributive law](https://en.wikipedia.org/wiki/Distributive_property). However, using this method takes an exponential time complexity regarding the number of atoms.
-
 To convert a logic formula to its CNF in linear complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
 
 ```
