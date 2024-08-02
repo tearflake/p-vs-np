@@ -112,6 +112,6 @@ The first step takes a constant amount of time, while the second and third step 
 
 ## 4. conclusion
 
-Disjunctive normal form has a convenient property of easy extraction of all possible solutions to since every consisting disjunct represents one possible solution set to Boolean satisfiability problem.
+Disjunctive normal form has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem since every consisting disjunct represents one possible solution set.
 
 An answer to the P = NP question would determine whether problems that can be verified in polynomial time can also be solved in polynomial time. Deriving DNF in linear time complexity implies a positive answer to this question which may be of crucial importance to many scientific fields. If there is no mistake in the presented method of converting any formula to its disjunctive normal form, we may have very valuable computing material at our disposal.
