@@ -1,9 +1,10 @@
 # P vs. NP solution proposition
 
-**type:** *Research paper*  
-**content:** *Derivation of linear time complexity solution to Boolean satisfiability problem*  
+**type:** *research paper*  
+**content:** *derivation of linear time complexity solution to Boolean satisfiability problem*  
 **author:**  *tearflake*  
 **references:** *Wikipedia*  
+**audience:** *beginners in sequent calculus and propositional logic*  
 
 ## table of contents
 
