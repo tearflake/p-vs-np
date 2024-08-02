@@ -12,7 +12,6 @@
 - **[3. converting to disjunctive normal form in linear time complexity](#3-converting-to-disjunctive-normal-form-in-linear-time-complexity)**  
 - **[4. conclusion](#4-conclusion)**  
 
-
 ## 1. introduction
 
 The [P versus NP problem](https://en.wikipedia.org/wiki/P_versus_NP_problem) is a major problem in computer science. It asks whether every problem whose solution can be quickly verified (technically, verified in polynomial time) can also be solved quickly (again, in polynomial time). P set denotes a class of problems that can be solved in polynomial time, while NP set denotes a class of problems that can be verified in polynomial time. If P equals NP, a lot of possibilities open, regarding to reduced amount of time needed to produce solutions for a whole range of problems.
@@ -85,7 +84,7 @@ Because all the above rules produce results of linear space complexity of expres
 
 We say that a logic formula is in disjunctive normal form (DNF) when it takes a form:
 
-    (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
+    (A1 /\ A2 /\ ...) \/ (B1 /\ B2 /\ ...) \/ ...
 
 We already concluded that it takes a linear amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in linear amount of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
 
