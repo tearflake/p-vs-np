@@ -24,7 +24,9 @@ In this short paper, we introduce a linear complexity time solution to the Boole
 
 We say that a logic formula is in conjunctive normal form (CNF) when it takes a form:
 
-    (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
+```
+(A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
+```
 
 To convert a logic formula to its CNF in linear complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
 
@@ -74,7 +76,7 @@ To convert a logic formula to its CNF in linear complexity time, we may reach fo
 
 The novel rules that are the essence of this short paper are rule `2.` and rule `4.`. We corroborate them by rules `5.` and `6.`.
 
-We start by inroducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate each such disjunction with the `/\` operator, forming the CNF formula of the starting formula F.
+We start by introducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate each such disjunction with the `/\` operator, forming the CNF formula of the starting formula F.
 
 Because all the above rules produce results of linear space complexity of expressions it starts from, we conclude that the whole procedure of **producing CNF from any formula takes a linear time complexity**.
 
@@ -82,7 +84,9 @@ Because all the above rules produce results of linear space complexity of expres
 
 We say that a logic formula is in disjunctive normal form (DNF) when it takes a form:
 
-    (A1 /\ A2 /\ ...) \/ (B1 /\ B2 /\ ...) \/ ...
+```
+(A1 /\ A2 /\ ...) \/ (B1 /\ B2 /\ ...) \/ ...
+```
 
 We already concluded that it takes a linear amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in linear amounts of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
 
