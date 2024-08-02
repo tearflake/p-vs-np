@@ -25,11 +25,11 @@ In this short paper, we introduce a linear complexity time solution to the Boole
 
 We say that a logic formula is in conjunctive normal form (CNF) when it takes a form:
 
-    (A1 ∨ B1 ∨ ...) ∧ (A2 ∨ B2 ∨ ...) ∧ ...
+    (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
 
 It is possible to convert any logic formula to it CNF using [double negative law](https://en.wikipedia.org/wiki/Double_negation#Double_negative_elimination), [De Morgan's laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws) and [distributive law](https://en.wikipedia.org/wiki/Distributive_property). However, using this method takes an exponential time complexity regarding the number of atoms.
 
-To convert a logic formula to its CNF in linear time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
+To convert a logic formula to its CNF in linear complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
 
 ```
      Γ |- Δ, (A1 \/ A2 \/ ...)
@@ -77,11 +77,15 @@ To convert a logic formula to its CNF in linear time, we may reach for a set of 
 
 The novel rules that are the essence of this short paper are rule `2.` and rule `4.`. We corroborate them by rules `5.` and `6.`.
 
-We start by making a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate each such disjunction with `/\` operator, forming the CNF formula of the starting formula F.
+We start by making a sequent from the formula F we want to convert: `|- F`. After that, we apply the above seven rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate each such disjunction with `/\` operator, forming the CNF formula of the starting formula F.
 
 Because all the above rules produce results of linear space complexity of expressions it start from, we conclude that the whole procedure of **producing CNF from any formula takes a linear time complexity**.
 
 ## 3. converting to disjunctive normal form in linear time complexity
+
+We say that a logic formula is in disjunctive normal form (DNF) when it takes a form:
+
+    (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
 
 We already concluded that it takes a linear amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in linear amount of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
 
