@@ -1,9 +1,9 @@
 # P vs. NP solution proposition
 
-**type:** *Research paper*  
-**content:** *Derivation of linear time complexity solution to Boolean satisfiability problem*  
-**author:**  *tearflake*  
-**references:** *Wikipedia*  
+**type:** *Research paper*  
+**content:** *Derivation of linear time complexity solution to Boolean satisfiability problem*  
+**author:**  *tearflake*  
+**references:** *Wikipedia*  
 
 ## table of contents
 
