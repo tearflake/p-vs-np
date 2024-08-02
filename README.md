@@ -78,7 +78,7 @@ The novel rules that are the essence of this short paper are rule `2.` and rule 
 
 We start by introducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate each such disjunction with the `/\` operator, forming the CNF formula of the starting formula F.
 
-Because all the above rules produce results in linear time complexity of expressions they transform, and there are no recursive patterns, we conclude that the whole procedure of **producing CNF from any formula takes a linear time complexity**.
+Notice that, unlike in regular sequence calculus strategy, `Γ` and `Δ` in each rule is reproduced only once. Also, there are no recursive patterns. As a consequence, we conclude that the whole procedure of **producing CNF from any formula takes a linear time complexity**.
 
 ## 3. converting to disjunctive normal form in linear time complexity
 
