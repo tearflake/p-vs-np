@@ -59,7 +59,7 @@ To convert a logic formula to its CNF in linear complexity time, we may reach fo
      Γ, (¬A1 \/ A2) -> Δ
 
 
-     Γ -> Δ, ~A1
+     Γ -> Δ, ¬A1
  7. -------------
      Γ, A1 -> Δ
 
