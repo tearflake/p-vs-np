@@ -122,7 +122,7 @@ DNF has a convenient property of easy extraction of all possible solutions to Bo
 ((¬A /\ B /\ C) \/ (¬A /\ ¬B) \/ (A /\ ¬B /\ ¬C))
 ```
 
-this means that we have three possible sets of solutions: `A -> F; B -> T; C -> T`, `A -> F; B -> F`, and `A -> T; B -> F; C -> F`.
+this means that we have three possible sets of solutions: `A -> F; B -> T; C -> T` or `A -> F; B -> F` or `A -> T; B -> F; C -> F`.
 
 ## 5. conclusion
 
