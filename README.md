@@ -16,7 +16,7 @@
 
 ## 1. introduction
 
-The [P versus NP problem](https://en.wikipedia.org/wiki/P_versus_NP_problem) is a major problem in computer science. It asks whether every problem whose solution can be quickly verified (technically, verified in polynomial time) can also be solved quickly (again, in polynomial time). P set denotes a class of problems that can be solved in polynomial time, while NP set denotes a class of problems that can be verified in polynomial time. If P equals NP, a lot of possibilities open, regarding the reduced amount of time needed to produce solutions for a whole range of problems.
+The [P versus NP problem](https://en.wikipedia.org/wiki/P_versus_NP_problem) is a major problem in computer science. It asks whether every problem whose solution can be quickly verified (technically, verified in polynomial time) can also be solved quickly (again, in polynomial time). P set denotes a class of problems that can be solved in polynomial time, while NP set denotes a class of problems that can be verified in polynomial time. If P equals NP, a lot of possibilities open, regarding the reduced amount of time needed to produce solutions for a whole variety of problems.
 
 In computational complexity theory, an [NP-complete](https://en.wikipedia.org/wiki/NP-completeness) decision problem is one belonging to both the NP and the [NP-hard](https://en.wikipedia.org/wiki/NP-hardness) complexity classes. A problem p in NP is NP-complete if every other problem in NP can be transformed (or reduced) into p in polynomial time. That means that a polynomial solution to any NP-complete problem would imply that P equals NP. [Boolean satisfiability problem](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) represents such an NP-complete problem.
 
@@ -30,7 +30,7 @@ We say that a logic formula is in conjunctive normal form (CNF) when it takes a 
 (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
 ```
 
-To convert a logic formula to its CNF in quadratic complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
+To convert any logic formula to its CNF in quadratic complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
 
 ```
      Γ |- Δ, (A1 \/ A2 \/ ...)
@@ -78,7 +78,7 @@ To convert a logic formula to its CNF in quadratic complexity time, we may reach
      ¬A1 \/ ¬A2 \/ ... \/ B1 \/ B2 \/ ...
 ```
 
-The rules which differ from traditional sequent calculus are rules `2.`, `4.`, `5.` and `6.`. Notice that, unlike in traditional sequence calculus normalization strategy, `Γ` and `Δ` in each rule is reproduced only once. Additionally, we use rule `9.` for translating sequents to logical formulas.
+The rules which differ from traditional sequent calculus are rules `2.`, `4.`, `5.` and `6.`. Notice that, unlike in traditional sequence calculus normalization strategy, `Γ` and `Δ` in each rule is reproduced only once. This is how we avoid exponential space complexity in applying rules. Additionally, rule `9.` is used for translating sequents to logical formulas.
 
 We start by introducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate such disjunctions with the `/\` operator, forming the CNF formula of the starting formula F.
 
@@ -92,7 +92,7 @@ We say that a logic formula is in disjunctive normal form (DNF) when it takes a 
 (A1 /\ A2 /\ ...) \/ (B1 /\ B2 /\ ...) \/ ...
 ```
 
-We already concluded that it takes a quadratic amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in quadratic amount of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
+We already concluded that it takes a quadratic time complexity to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in quadratic time complexity using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
 
 ```
 1. negate formula F,
@@ -119,7 +119,7 @@ The first step takes a constant amount of time, the second step takes a quadrati
 DNF has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem. Namely, each disjunct of DNF represents one possible solution set of the starting formula. For example, if we get a DNF like:
 
 ```
-((¬A /\ B /\ C) \/ (¬A /\ ¬B) \/ (A /\ ¬B /\ ¬C))
+(¬A /\ B /\ C) \/ (¬A /\ ¬B) \/ (A /\ ¬B /\ ¬C)
 ```
 
 this means that we have three possible solution sets: `{A -> F, B -> T, C -> T}` or `{A -> F, B -> F}` or `{A -> T, B -> F, C -> F}`.
