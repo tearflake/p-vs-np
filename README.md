@@ -1,6 +1,6 @@
 # P vs. NP solution proposal
 
-**type:** *research paper*  
+**type of document:** *research paper*  
 **content:** *derivation of quadratic time complexity solution to Boolean satisfiability problem*  
 **author:**  *tearflake*  
 **references:** *Wikipedia*  
@@ -126,4 +126,4 @@ this means that we have three possible solution sets: `{A -> F, B -> T, C -> T}`
 
 ## 5. conclusion
 
-An answer to the P = NP question would determine whether problems that can be verified in polynomial time can also be solved in polynomial time. Deriving DNF in quadratic time complexity implies a positive answer to this question which may be of crucial importance to many scientific fields. If there is no mistake in the presented method of converting any formula to its disjunctive normal form, we may have very valuable computing material at our disposal.
+An answer to the P = NP question would determine whether problems that can be verified in polynomial time can also be solved in polynomial time. Deriving DNF in quadratic time complexity implies a positive answer to this question which may be of crucial importance to many scientific fields. If there are no mistakes in the presented method of converting any formula to its disjunctive normal form, we may have very valuable computing material at our disposal.
