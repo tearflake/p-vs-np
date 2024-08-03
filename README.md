@@ -54,22 +54,22 @@ To convert a logic formula to its CNF in linear complexity time, we may reach fo
 
      Γ |- Δ, (A1 -> A2)
  5. --------------------
-      Γ -> Δ, ¬A1, A2
+      Γ |- Δ, ¬A1, A2
 
 
-      Γ, (A1 -> A2) -> Δ
+      Γ, (A1 -> A2) |- Δ
  6. ----------------------
-     Γ, (¬A1 \/ A2) -> Δ
+     Γ, (¬A1 \/ A2) |- Δ
 
 
-     Γ -> Δ, ¬A1
+     Γ |- Δ, ¬A1
  7. -------------
-     Γ, A1 -> Δ
+     Γ, A1 |- Δ
 
 
-     Γ, ¬A1 -> Δ
+     Γ, ¬A1 |- Δ
  8. -------------
-     Γ -> Δ, A1
+     Γ |- Δ, A1
 
 
            A1, A2, ... |- B1, B2, ...
@@ -102,7 +102,7 @@ We already concluded that it takes a linear amount of time to convert any formul
 In step 3, from the negated CNF formula we extract its DNF. Normally, converting a random formula to its DNF takes an exponential time in the worst case. But in step 3, fortunately, we are dealing with the best case scenario. Thus, we are always encountering the following pattern:
 
 ```
-  ¬((A1 \/ A2 \/ ...) /\ ... /\ (Z1 \/ Z2 \/ ...))
+  ¬((A1 \/ A2 \/ ...) /\ ... /\ (Z1 \/ Z2 \/ ...))
 -----------------------------------------------------
   (¬A1 /\ ¬A2 /\ ...) \/ ... \/ (¬Z1 /\ ¬Z2 /\ ...)
 ```
