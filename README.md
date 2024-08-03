@@ -1,7 +1,7 @@
 # P vs. NP solution proposal
 
 **type of document:** *research paper*  
-**contents:** *quadratic time complexity solution to Boolean satisfiability problem and P vs. NP problem consequences*  
+**content:** *quadratic time complexity solution to Boolean satisfiability problem and P vs. NP problem consequences*  
 **author:** *tearflake*  
 **references:** *Wikipedia*  
 **intended audience:** *beginners in sequent calculus and propositional logic*  
@@ -82,7 +82,7 @@ The rules which differ from traditional sequent calculus are rules `2.`, `4.`, `
 
 We start by introducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate such disjunctions with the `/\` operator, forming the CNF formula of the starting formula F.
 
-Considering the total number of syntactic nodes on which any above rule can be applied, the whole procedure of **producing CNF from any formula takes a quadratic time complexity**.
+Considering the total number of syntactic nodes on which any above rule can be applied, the whole procedure of **producing CNF from any formula takes a quadratic time complexity** regarding number of atoms in starting formula.
 
 ## 3. converting to disjunctive normal form in quadratic time complexity
 
@@ -112,7 +112,7 @@ The pattern seems extremely simple, and we are assuming it can always be perform
 
 All that remains is to eliminate double negations and to exclude every contradictory disjunct from the final formula. If all disjuncts are contradictory, the formula F does not have a satisfiable solution.
 
-The first step takes a constant amount of time, the second step takes a quadratic amount of time, while the third step takes a linear amount of time. This leads us to a total of **quadratic time complexity for producing DNF from any logic formula**.
+The first step takes a constant amount of time, the second step takes a quadratic amount of time, while the third step takes a linear amount of time. This leads us to a total of **quadratic time complexity for producing DNF from any logic formula** regarding number of atoms in starting formula.
 
 ## 4. extracting set of satisfiable solutions
 
