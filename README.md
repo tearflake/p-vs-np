@@ -100,7 +100,7 @@ We already concluded that it takes a linear amount of time to convert any formul
 In step 3, from the negated CNF formula we extract its DNF. Normally, converting a random formula to its DNF takes an exponential time in the worst case. But in step 3, fortunately, we are dealing with the best case scenario. Thus, we are always encountering the following pattern:
 
 ```
- ¬( (A1 \/ A2 \/ ...) /\ ... /\ (Z1 \/ Z2 \/ ...) )
+  ¬((A1 \/ A2 \/ ...) /\ ... /\ (Z1 \/ Z2 \/ ...))
 -----------------------------------------------------
   (¬A1 /\ ¬A2 /\ ...) \/ ... \/ (¬Z1 /\ ¬Z2 /\ ...)
 ```
