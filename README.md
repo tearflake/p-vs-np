@@ -1,7 +1,7 @@
-# P vs. NP solution proposition
+# P vs. NP solution proposal
 
 **type:** *research paper*  
-**content:** *derivation of linear time complexity solution to Boolean satisfiability problem*  
+**content:** *derivation of quadratic time complexity solution to Boolean satisfiability problem*  
 **author:**  *tearflake*  
 **references:** *Wikipedia*  
 **intended audience:** *beginners in sequent calculus and propositional logic*  
@@ -9,8 +9,8 @@
 ## table of contents
 
 - **[1. introduction](#1-introduction)**  
-- **[2. converting to conjunctive normal form in linear time complexity](#2-converting-to-conjunctive-normal-form-in-linear-time-complexity)**  
-- **[3. converting to disjunctive normal form in linear time complexity](#3-converting-to-disjunctive-normal-form-in-linear-time-complexity)**  
+- **[2. converting to conjunctive normal form in quadratic time complexity](#2-converting-to-conjunctive-normal-form-in-quadratic-time-complexity)**  
+- **[3. converting to disjunctive normal form in quadratic time complexity](#3-converting-to-disjunctive-normal-form-in-quadratic-time-complexity)**  
 - **[4. extracting set of satisfiable solutions](#4-extracting-set-of-satisfiable-solutions)**
 - **[5. conclusion](#4-conclusion)**  
 
@@ -20,9 +20,9 @@ The [P versus NP problem](https://en.wikipedia.org/wiki/P_versus_NP_problem) is 
 
 In computational complexity theory, an [NP-complete](https://en.wikipedia.org/wiki/NP-completeness) decision problem is one belonging to both the NP and the [NP-hard](https://en.wikipedia.org/wiki/NP-hardness) complexity classes. A problem p in NP is NP-complete if every other problem in NP can be transformed (or reduced) into p in polynomial time. That means that a polynomial solution to any NP-complete problem would imply that P equals NP. [Boolean satisfiability problem](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem) represents such an NP-complete problem.
 
-In this short paper, we introduce a linear complexity time solution to the Boolean satisfiability problem. First, we present a method for converting any logic formula to its [conjunctive](https://en.wikipedia.org/wiki/Conjunctive_normal_form) normal form. Next, building upon this method, we present a method for converting any logic formula to its [disjunctive](https://en.wikipedia.org/wiki/Disjunctive_normal_form) normal form from which solutions to the Boolean satisfiability problem may be derived. Lastly, we overview the described method of finding solutions while concluding that P set equals set NP set. 
+In this short paper, we introduce a quadratic complexity time solution to the Boolean satisfiability problem. First, we present a method for converting any logic formula to its [conjunctive](https://en.wikipedia.org/wiki/Conjunctive_normal_form) normal form. Next, building upon this method, we present a method for converting any logic formula to its [disjunctive](https://en.wikipedia.org/wiki/Disjunctive_normal_form) normal form from which solutions to the Boolean satisfiability problem may be derived. Lastly, we overview the described method of finding solutions while concluding that P set equals set NP set. 
 
-## 2. converting to conjunctive normal form in linear time complexity
+## 2. converting to conjunctive normal form in quadratic time complexity
 
 We say that a logic formula is in conjunctive normal form (CNF) when it takes a form:
 
@@ -30,7 +30,7 @@ We say that a logic formula is in conjunctive normal form (CNF) when it takes a 
 (A1 \/ A2 \/ ...) /\ (B1 \/ B2 \/ ...) /\ ...
 ```
 
-To convert a logic formula to its CNF in linear complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
+To convert a logic formula to its CNF in quadratic complexity time, we may reach for a set of novel transformation rules inspired by the ones from [sequent calculus](https://en.wikipedia.org/wiki/Sequent_calculus):
 
 ```
      Γ |- Δ, (A1 \/ A2 \/ ...)
@@ -82,9 +82,9 @@ The novel rules that are the essence of this short paper are rule `2.` and rule 
 
 We start by introducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate each such disjunction with the `/\` operator, forming the CNF formula of the starting formula F.
 
-Notice that, unlike in regular sequence calculus normalization strategy, `Γ` and `Δ` in each rule is reproduced only once. Also, there are no recursive patterns. As a consequence, the whole procedure of **producing CNF from any formula takes a linear time complexity**.
+Notice that, unlike in regular sequence calculus normalization strategy, `Γ` and `Δ` in each rule is reproduced only once. Also, there are no recursive patterns. As a consequence, the whole procedure of **producing CNF from any formula takes a quadratic time complexity**.
 
-## 3. converting to disjunctive normal form in linear time complexity
+## 3. converting to disjunctive normal form in quadratic time complexity
 
 We say that a logic formula is in disjunctive normal form (DNF) when it takes a form:
 
@@ -92,7 +92,7 @@ We say that a logic formula is in disjunctive normal form (DNF) when it takes a 
 (A1 /\ A2 /\ ...) \/ (B1 /\ B2 /\ ...) \/ ...
 ```
 
-We already concluded that it takes a linear amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in linear amounts of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
+We already concluded that it takes a quadratic amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in quadratic amounts of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
 
 ```
 1. negate formula F,
@@ -108,11 +108,11 @@ In step 3, from the negated CNF formula we extract its DNF. Normally, converting
   (¬A1 /\ ¬A2 /\ ...) \/ ... \/ (¬Z1 /\ ¬Z2 /\ ...)
 ```
 
-The pattern seems extremely simple, and we are assuming it can always be performed at least in linear complexity time.
+The pattern seems extremely simple, and we are assuming it can always be performed at least in quadratic complexity time.
 
 All that remains is to eliminate double negations and to exclude every contradictory disjunct from the final formula. If all disjuncts are contradictory, the formula F does not have a satisfiable solution.
 
-The first step takes a constant amount of time, while the second and third step take a linear amount of time regarding the number of atoms, which leads us to a total of **linear time complexity for producing DNF from any logic formula**.
+The first step takes a constant amount of time, the second step takes a quadratic amount of time, while the third step takes a linear amount of time, all regarding the number of atoms, which leads us to a total of **quadratic time complexity for producing DNF from any logic formula**.
 
 ## 4. extracting set of satisfiable solutions
 
@@ -126,4 +126,4 @@ this means that we have three possible sets of solutions: `A -> F; B -> T; C -> 
 
 ## 5. conclusion
 
-An answer to the P = NP question would determine whether problems that can be verified in polynomial time can also be solved in polynomial time. Deriving DNF in linear time complexity implies a positive answer to this question which may be of crucial importance to many scientific fields. If there is no mistake in the presented method of converting any formula to its disjunctive normal form, we may have very valuable computing material at our disposal.
+An answer to the P = NP question would determine whether problems that can be verified in polynomial time can also be solved in polynomial time. Deriving DNF in quadratic time complexity implies a positive answer to this question which may be of crucial importance to many scientific fields. If there is no mistake in the presented method of converting any formula to its disjunctive normal form, we may have very valuable computing material at our disposal.
