@@ -108,7 +108,7 @@ In step 3, from the negated CNF formula we extract its DNF. Normally, converting
   (¬A1 /\ ¬A2 /\ ...) \/ ... \/ (¬Z1 /\ ¬Z2 /\ ...)
 ```
 
-The pattern seems extremely simple, and we are assuming it can always be performed at least in linear complexity time.
+The is a simple pattern, and we are assuming it can always be performed at most in linear complexity time.
 
 All that remains is to eliminate double negations and to exclude every contradictory disjunct from the final formula. If all disjuncts are contradictory, the formula F does not have a satisfiable solution.
 
