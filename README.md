@@ -111,7 +111,7 @@ All that remains is to eliminate double negations and to exclude every contradic
 
 The first step takes a constant amount of time, while the second and third step take a linear amount of time regarding the number of atoms, which leads us to a total of **linear time complexity for producing DNF from any logic formula**.
 
-Disjunctive normal form has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem since every disjunct represents one possible solution set to the starting formula.
+Disjunctive normal form has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem since each disjunct represents one possible solution set to the starting formula.
 
 ## 4. conclusion
 
