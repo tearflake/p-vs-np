@@ -1,5 +1,5 @@
 # P vs. NP solution proposal
-
+|---|---|
 |**type of document:** | *research paper* |
 |**content:** | *derivation of quadratic time complexity solution to Boolean satisfiability problem and P vs. NP problem consequences* |
 |**author:** | *tearflake* |
