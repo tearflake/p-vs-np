@@ -11,7 +11,8 @@
 - **[1. introduction](#1-introduction)**  
 - **[2. converting to conjunctive normal form in linear time complexity](#2-converting-to-conjunctive-normal-form-in-linear-time-complexity)**  
 - **[3. converting to disjunctive normal form in linear time complexity](#3-converting-to-disjunctive-normal-form-in-linear-time-complexity)**  
-- **[4. conclusion](#4-conclusion)**  
+- **[4. extracting set of satisfiable solutions](4-extracting-set-of-satisfiable-solutions)**
+- **[5. conclusion](#4-conclusion)**  
 
 ## 1. introduction
 
@@ -113,8 +114,16 @@ All that remains is to eliminate double negations and to exclude every contradic
 
 The first step takes a constant amount of time, while the second and third step take a linear amount of time regarding the number of atoms, which leads us to a total of **linear time complexity for producing DNF from any logic formula**.
 
-Disjunctive normal form has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem since each disjunct represents one possible solution set to the starting formula.
+## 4. extracting set of satisfiable solutions
 
-## 4. conclusion
+DNF has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem. Namely, each disjunct of DNF represents one possible solution set of the starting formula. Thus, if we get a DNF like:
+
+```
+((¬A /\ B /\ C) \/ (¬A /\ ¬B) \/ (A /\ ¬B /\ ¬C))
+```
+
+this means that we have three possible sets of solutions: `A -> F; B -> T; C -> T`, `A -> F; B -> F`, and `A -> T; B -> F; C -> F`.
+
+## 5. conclusion
 
 An answer to the P = NP question would determine whether problems that can be verified in polynomial time can also be solved in polynomial time. Deriving DNF in linear time complexity implies a positive answer to this question which may be of crucial importance to many scientific fields. If there is no mistake in the presented method of converting any formula to its disjunctive normal form, we may have very valuable computing material at our disposal.
