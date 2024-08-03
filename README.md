@@ -116,13 +116,13 @@ The first step takes a constant amount of time, the second step takes a quadrati
 
 ## 4. extracting set of satisfiable solutions
 
-DNF has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem. Namely, each disjunct of DNF represents one possible solution set of the starting formula. Thus, if we get a DNF like:
+DNF has a convenient property of easy extraction of all possible solutions to Boolean satisfiability problem. Namely, each disjunct of DNF represents one possible solution set of the starting formula. For example, if we get a DNF like:
 
 ```
 ((¬A /\ B /\ C) \/ (¬A /\ ¬B) \/ (A /\ ¬B /\ ¬C))
 ```
 
-this means that we have three possible sets of solutions: `A -> F; B -> T; C -> T` or `A -> F; B -> F` or `A -> T; B -> F; C -> F`.
+this means that we have three possible solution sets: `{A -> F, B -> T, C -> T}` or `{A -> F, B -> F}` or `{A -> T, B -> F, C -> F}`.
 
 ## 5. conclusion
 
