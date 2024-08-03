@@ -112,7 +112,7 @@ The pattern seems extremely simple, and we are assuming it can always be perform
 
 All that remains is to eliminate double negations and to exclude every contradictory disjunct from the final formula. If all disjuncts are contradictory, the formula F does not have a satisfiable solution.
 
-The first step takes a constant amount of time, the second step takes a quadratic amount of time, while the third step takes a linear amount of time, all regarding the number of atoms, which leads us to a total of **quadratic time complexity for producing DNF from any logic formula**.
+The first step takes a constant amount of time, the second step takes a quadratic amount of time, while the third step takes a linear amount of time, all regarding the number of atoms. This leads us to a total of **quadratic time complexity for producing DNF from any logic formula**.
 
 ## 4. extracting set of satisfiable solutions
 
