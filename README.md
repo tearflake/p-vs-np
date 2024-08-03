@@ -107,7 +107,7 @@ In step 3, from the negated CNF formula we extract its DNF. Normally, converting
 
 The pattern seems extremely simple, and we are assuming it can always be performed at least in linear complexity time.
 
-All that remains to exclude every contradictory disjunct from the final formula. If all disjuncts are contradictory, the formula F does not have a satisfiable solution.
+All that remains is to eliminate double negation and to exclude every contradictory disjunct from the final formula. If all disjuncts are contradictory, the formula F does not have a satisfiable solution.
 
 The first step takes a constant amount of time, while the second and third step take a linear amount of time regarding the number of atoms, which leads us to a total of **linear time complexity for producing DNF from any logic formula**.
 
