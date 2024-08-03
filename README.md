@@ -92,7 +92,7 @@ We say that a logic formula is in disjunctive normal form (DNF) when it takes a 
 (A1 /\ A2 /\ ...) \/ (B1 /\ B2 /\ ...) \/ ...
 ```
 
-We already concluded that it takes a quadratic amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in quadratic amounts of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
+We already concluded that it takes a quadratic amount of time to convert any formula to CNF formula. However, it is also possible to convert any formula to its DNF in quadratic amount of time using only negation and conversion to CNF. We start from boolean formula F. The procedure of converting to its DNF consists of three simple steps:
 
 ```
 1. negate formula F,
