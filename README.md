@@ -78,7 +78,7 @@ To convert any logic formula to its CNF in quadratic complexity time, we may rea
      ¬A1 \/ ¬A2 \/ ... \/ B1 \/ B2 \/ ...
 ```
 
-The rules which differ from traditional sequent calculus are rules `2.`, `4.`, `5.` and `6.`. Notice that, unlike in traditional sequence calculus normalization strategy, `Γ` and `Δ` in each rule is reproduced only once. This is how we avoid exponential space complexity in applying rules. Additionally, rule `9.` is used for translating sequents to logical formulas.
+The rules which differ from traditional sequent calculus are rules `2.`, `4.`, `5.` and `6.`. Notice that, unlike in traditional sequence calculus normalization strategy, `Γ` and `Δ` in each rule is reproduced only once. This is how we avoid exponential space complexity in applying rules. Additionally, rule `9.` is used for translating normalized sequents to logical formulas.
 
 We start by introducing a sequent from the formula F we want to convert: `|- F`. After that, we apply the above nine rules in noted order of precedence. The first eight rules are the rules for normalizing sequents, while the ninth rule converts each sequent to a disjunction. Lastly, we concatenate such disjunctions with the `/\` operator, forming the CNF formula of the starting formula F.
 
