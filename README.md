@@ -11,7 +11,7 @@
 - **[1. introduction](#1-introduction)**  
 - **[2. converting to conjunctive normal form in linear time complexity](#2-converting-to-conjunctive-normal-form-in-linear-time-complexity)**  
 - **[3. converting to disjunctive normal form in linear time complexity](#3-converting-to-disjunctive-normal-form-in-linear-time-complexity)**  
-- **[4. extracting set of satisfiable solutions](4-extracting-set-of-satisfiable-solutions)**
+- **[4. extracting set of satisfiable solutions](#4-extracting-set-of-satisfiable-solutions)**
 - **[5. conclusion](#4-conclusion)**  
 
 ## 1. introduction
